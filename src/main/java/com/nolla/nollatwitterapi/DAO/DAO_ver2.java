@@ -24,7 +24,7 @@ public String addTweet (String message){
     Map<String, Object> paramMap = new HashMap();
     paramMap.put("tweet", message);
     template.update(INSERT_QUERY, paramMap);
-    return "ok" ;
+    return "ok";
 }
 
 public List<Model_ver2> getTweets(){
