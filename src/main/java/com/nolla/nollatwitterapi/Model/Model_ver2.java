@@ -1,11 +1,14 @@
 package com.nolla.nollatwitterapi.Model;
 
+import java.sql.Array;
 import java.time.LocalDateTime;
 
 public class Model_ver2 {
     private Long twt_id;
     private LocalDateTime created_twt;
     private String content_twt;
+
+    private Long twt_like;
 
     public Long getTwt_id() {
         return twt_id;
@@ -29,5 +32,23 @@ public class Model_ver2 {
 
     public void setContent_twt(String content_twt) {
         this.content_twt = content_twt;
+    }
+
+    public Long getTwt_like() {
+        return twt_like;
+    }
+
+    public void setTwt_like(Long twt_like) {
+        this.twt_like = twt_like;
+    }
+
+    public Model_ver2(Long twt_id, LocalDateTime created_twt, String content_twt, Long twt_like) {
+        this.twt_id = twt_id;
+        this.created_twt = created_twt;
+        this.content_twt = content_twt;
+        this.twt_like = twt_like;
+    }
+
+    public Model_ver2() {
     }
 }

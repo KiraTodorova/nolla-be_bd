@@ -18,7 +18,7 @@ public class TweetController {
 
 
     @GetMapping("/fetchTweet")
-    public List<Model_ver2> fetchTweet() {
+    public List<Model_ver2> getTweets() {
         return tweetDao.getTweets();
     }
 
@@ -27,5 +27,22 @@ public class TweetController {
         System.out.println("Received: " + tweet);
         tweetDao.addTweet(tweet);
         return "ok";
+    }
+
+    @DeleteMapping("/deleteTweet/{twt_id}")
+    public Long deleteTweet(@PathVariable Long twt_id) {
+        System.out.println("Deleted: " + twt_id);
+        tweetDao.deleteTweet(twt_id);
+        return twt_id;
+
+
+    }
+
+    @PutMapping("/likeTweet/{twt_id}")
+    public Long addLikeTweet(@PathVariable Long twt_id) {
+System.out.println("Tweet Liked with: " + twt_id);
+tweetDao.likeTweet(twt_id);
+
+        return twt_id;
     }
 }
