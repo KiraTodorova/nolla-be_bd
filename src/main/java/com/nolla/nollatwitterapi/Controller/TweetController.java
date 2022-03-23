@@ -40,9 +40,8 @@ public class TweetController {
 
     @PutMapping("/likeTweet/{twt_id}")
     public Long addLikeTweet(@PathVariable Long twt_id) {
-System.out.println("Tweet Liked with: " + twt_id);
-tweetDao.likeTweet(twt_id);
-
+        System.out.println("Tweet Liked with: " + twt_id);
+        tweetDao.likeTweet(twt_id);
         return twt_id;
     }
 }
