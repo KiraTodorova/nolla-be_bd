@@ -6,9 +6,9 @@ import java.time.LocalDateTime;
 public class Model_ver2 {
     private Long twt_id;
     private LocalDateTime created_twt;
-    private String content_twt;
+    private static String content_twt;
 
-    private Long twt_like;
+    private static Long twt_like;
 
     public Long getTwt_id() {
         return twt_id;
@@ -26,7 +26,7 @@ public class Model_ver2 {
         this.created_twt = created_twt;
     }
 
-    public String getContent_twt() {
+    public static String getContent_twt() {
         return content_twt;
     }
 
@@ -34,7 +34,7 @@ public class Model_ver2 {
         this.content_twt = content_twt;
     }
 
-    public Long getTwt_like() {
+    public static Long getTwt_like() {
         return twt_like;
     }
 
